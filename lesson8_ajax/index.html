@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+	$.get('http://localhost/profiles', function(profile_names) {
+		$.echo(profile_names, function(i, pname) {
+			$('#profiles').append('<option>' + pname + '</option>');
+		});
+	}, 'json');
+	</script>
+</body>
+</html>
